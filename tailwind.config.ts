@@ -14,6 +14,10 @@ const config: Config = {
       },
     },
     extend: {
+      fontFamily: {
+        futura: ['var(--font-futura)'],
+        helvetica: ['var(--font-helvetica)'],
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':

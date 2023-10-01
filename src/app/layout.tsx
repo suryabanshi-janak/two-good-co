@@ -5,6 +5,13 @@ import localFont from 'next/font/local';
 const futura = localFont({
   src: '../../public/fonts/Futura-Bold.woff2',
   display: 'swap',
+  variable: '--font-futura',
+});
+
+const helvetica = localFont({
+  src: '../../public/fonts/HelveticaNowText-Regular.woff2',
+  display: 'swap',
+  variable: '--font-helvetica',
 });
 
 export const metadata: Metadata = {
@@ -19,7 +26,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={futura.className}>{children}</body>
+      <body className={`${futura.variable} ${helvetica.variable} font-futura`}>
+        {children}
+      </body>
     </html>
   );
 }

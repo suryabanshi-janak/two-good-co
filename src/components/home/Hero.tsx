@@ -3,7 +3,7 @@
 import * as React from 'react';
 import { gsap } from 'gsap';
 
-export default function Hero() {
+export default function HeroSection() {
   const heroRef = React.useRef<HTMLDivElement>(null);
   const playRef = React.useRef<HTMLDivElement>(null);
   const videoRef = React.useRef<HTMLDivElement>(null);
@@ -54,18 +54,14 @@ export default function Hero() {
   };
 
   return (
-    <section
-      id='hero'
-      className='min-h-screen w-full relative pt-[20vh]'
-      ref={heroRef}
-    >
+    <section id='hero' className='w-full relative pt-[20vh]' ref={heroRef}>
       <div className='text-[16.2vw] leading-[14vw] uppercase tracking-tighter'>
         <h1 data-heading>change</h1>
         <h1 data-heading>the course</h1>
       </div>
 
       <div
-        className='h-screen w-full mt-6 relative cursor-pointer'
+        className='w-full my-6 relative cursor-pointer'
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
         onMouseMove={onMouseMove}
